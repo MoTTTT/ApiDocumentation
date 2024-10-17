@@ -1,0 +1,26 @@
+site_name: ApiDocumentation
+site_url: https://motttt.github.io/ApiDocumentation/
+
+site_description: Documentation for the use of order and service APIs
+site_author: Martin Colley
+
+plugins:
+    - search
+
+    - swagger-ui-tag
+
+theme: readthedocs
+
+nav:
+  - 'Introduction':
+    - onboardingProcess.md
+    - simulator.md
+  - 'Order API':
+    - orderSpecification.md
+  - 'Service API':
+    - serviceSpecification.md
+  - 'Troubleshooting':
+    - errorCodes.md
+    - troubleshooting.md
+  - 'References':
+    - tmfApiSpecifications.md
