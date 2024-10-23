@@ -1,10 +1,33 @@
 {
     "swagger": "2.0",
     "info": {
-    "description": "\n**VERSION**: **V1.1**\nAdded GET operation: return service information; documentation improvement.\nEnhanced PATCH Operation: Added various validations; Documentation improvement.\n**VERSION**: **V1.0**\nInitial release\n### API Headers configuration\nThe following headers mandatory.\n\n  | Headers configuration | Value |\n  |--------|-------|\n  | Accept | application/json |\n  | Content-Type | application/json |\n\n\n Copyright: Telkom SA Ltd",
+    "description": "\n
+## Releases\n
+
+| Version | Description                                                         |\n
+|---------|---------------------------------------------------------------------|\n
+| V1.1    | Added GET operation: return service information; Enhanced PATCH
+Operation: Added various validations; Documentation improvements.               |\n
+| V1.0    | Initial release                                                     |\n
+
+## Request Headers\n
+
+The following headers are mandatory:\n\n 
+
+| Header            |        Value                    |\n
+|-------------------|---------------------------------|\n
+| `Accept`          | application/json                |\n
+| `Content-Type`    | application/json                |\n
+| `Authorization`   | Basic Base64(username:password) |\n\n 
+
+See the *Authentication and Authorization* chapter for more detail on the 
+`Authorization` header value \n\n
+
+Copyright: Telkom SA Ltd",
     "version": "1.1",
-    "title": "API Activation and Configuration"
+    "title": "Service Management"
     },
+    "host": "ecdev01api.telkom.co.za",
     "basePath": "/cons-ac/Activation-Config/v1",
     "schemes": [
     "https"

@@ -1,10 +1,37 @@
 {
     "swagger": "2.0",
     "info": {
-    "description": "\n**VERSION**: **V1.2**\nEnhanced GET Operation: return additiona order information; Added various validations; Documentation improvements\n**VERSION**: **V1.1**\nAdded support for auto-update of spend limits: addAdhocBundle product order has been updated with the addition of AutoAdjustSpendLimitFlag to authorise adjustment of the temporary spend limit to the ad-hoc bundle cost on add-hoc bundle purchases.\n**VERSION**: **V1.0**\nInitial release\n### API Headers configuration\nThe following headers mandatory.\n\n  | Headers configuration | Value |\n  |--------|-------|\n  | Accept | application/json |\n  | Content-Type | application/json |\n\n\n Copyright: Telkom SA Ltd\n ",
-    "version": "1.1",
-    "title": "Onbillers Product Ordering API"
+    "description": "\n
+## Releases\n
+
+| Version | Description                                                         |\n
+|---------|---------------------------------------------------------------------|\n
+| V1.2    | Enhanced GET Operation: return additional order information; 
+ Added various validations; Documentation improvements                          |\n
+| V1.1    | Added support for auto-update of spend limits: addAdhocBundle
+ product order has been updated with the addition of AutoAdjustSpendLimitFlag 
+ to authorise adjustment of the temporary spend limit to the ad-hoc bundle cost 
+ on add-hoc bundle purchases.                                                   |\n
+| V1.0    | Initial release                                                     |\n
+
+## Request Headers\n
+
+The following headers are mandatory:\n\n 
+
+| Header            |        Value                    |\n
+|-------------------|---------------------------------|\n
+| `Accept`          | application/json                |\n
+| `Content-Type`    | application/json                |\n
+| `Authorization`   | Basic Base64(username:password) |\n\n 
+
+See the *Authentication and Authorization* chapter for more detail on the 
+`Authorization` header value \n\n
+
+Copyright: Telkom SA Ltd",
+    "version": "1.2",
+    "title": "Order Management"
     },
+    "host": "ecdev01api.telkom.co.za",
     "basePath": "/cons-po/ProductOrder/v1",
     "schemes": [
     "https"
