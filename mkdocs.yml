@@ -13,14 +13,15 @@ theme: readthedocs
 
 nav:
   - 'Introduction':
+    - apiOperationList.md
     - onboardingProcess.md
     - simulator.md
+    - authorisation.md
   - 'Order API':
     - orderSpecification.md
   - 'Service API':
     - serviceSpecification.md
+  - 'Ticket API':
+    - ticketSpecification.md
   - 'Troubleshooting':
     - errorCodes.md
-    - troubleshooting.md
-  - 'References':
-    - tmfApiSpecifications.md

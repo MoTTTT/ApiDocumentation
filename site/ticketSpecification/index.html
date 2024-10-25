@@ -4,17 +4,17 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="Martin Colley" name="author"/><link href="https://motttt.github.io/ApiDocumentation/errorCodes/" rel="canonical"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="Martin Colley" name="author"/><link href="https://motttt.github.io/ApiDocumentation/ticketSpecification/" rel="canonical"/>
 <link href="../img/favicon.ico" rel="shortcut icon"/>
-<title>Error Codes - ApiDocumentation</title>
+<title>ticketSpecification - ApiDocumentation</title>
 <link href="../css/theme.css" rel="stylesheet"/>
 <link href="../css/theme_extra.css" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" rel="stylesheet"/>
 <script>
         // Current page data
-        var mkdocs_page_name = "Error Codes";
-        var mkdocs_page_input_path = "errorCodes.md";
-        var mkdocs_page_url = "/ApiDocumentation/errorCodes/";
+        var mkdocs_page_name = "ticketSpecification";
+        var mkdocs_page_input_path = "ticketSpecification.md";
+        var mkdocs_page_url = "/ApiDocumentation/ticketSpecification/";
       </script>
 <!--[if lt IE 9]>
       <script src="../js/html5shiv.min.js"></script>
@@ -57,25 +57,13 @@
 </li>
 </ul>
 <p class="caption"><span class="caption-text">Ticket API</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../ticketSpecification/">ticketSpecification</a>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal current" href="./">ticketSpecification</a>
 </li>
 </ul>
 <p class="caption"><span class="caption-text">Troubleshooting</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="reference internal current" href="./">Error Codes</a>
-<ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="#http-response-codes">HTTP Response codes</a>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#api-response-error-payload">API Response Error Payload</a>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#structure-of-the-error-body-response">Structure of the Error Body Response</a>
 <ul>
-<li class="toctree-l3"><a class="reference internal" href="#description-of-encoded-information-in-the-error-response-json">Description of encoded information in the error response json</a>
-</li>
-</ul>
-</li>
-</ul>
+<li class="toctree-l1"><a class="reference internal" href="../errorCodes/">Error Codes</a>
 </li>
 </ul>
 </div>
@@ -90,8 +78,8 @@
 <div class="rst-content"><div aria-label="breadcrumbs navigation" role="navigation">
 <ul class="wy-breadcrumbs">
 <li><a aria-label="Docs" class="icon icon-home" href=".."></a></li>
-<li class="breadcrumb-item">Troubleshooting</li>
-<li class="breadcrumb-item active">Error Codes</li>
+<li class="breadcrumb-item">Ticket API</li>
+<li class="breadcrumb-item active">ticketSpecification</li>
 <li class="wy-breadcrumbs-aside">
 </li>
 </ul>
@@ -99,145 +87,12 @@
 </div>
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
-<h1 id="error-codes">Error Codes</h1>
-<p>Error information returned from failed API calls always include standard HTTP response codes.</p>
-<p>In addition, for some error scenarios, a json response payload with further error information is returned.</p>
-<h2 id="http-response-codes">HTTP Response codes</h2>
-<p>The HTTP response codes are included in the response header. </p>
-<p>2XX series responses indicate success.</p>
-<p>4XX series responses indicate an API client error.</p>
-<p>5XX response error codes indicate a server error. Server errors include client request attribute or business rule failure scenarios,
-such as downstream validation failures.</p>
-<table>
-<thead>
-<tr>
-<th>Code</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>201</td>
-<td>OK: Used to indicate HTTP GET success.</td>
-</tr>
-<tr>
-<td>201</td>
-<td>Created: Used to indicate successful resource creation in synchronous processes.</td>
-</tr>
-<tr>
-<td>202</td>
-<td>Accepted: Used to indicate successful acceptance or requests in asynchronous processes.</td>
-</tr>
-<tr>
-<td>400</td>
-<td>Bad Request: This is used to indicate a non-specific failure, indicating that the request could not be understood by the server.</td>
-</tr>
-<tr>
-<td>401</td>
-<td>Unauthorized: This is returned when the request did not include valid credentials.</td>
-</tr>
-<tr>
-<td>403</td>
-<td>Forbidden: The user is not authorised for the operation, or resource. An error payload may be returned, providing further detail.</td>
-</tr>
-<tr>
-<td>410</td>
-<td>Bad Format: Either the request structure is invalid, or there are missing mandatory attributes.</td>
-</tr>
-<tr>
-<td>500</td>
-<td>Internal Server Error: Indicates downstream technical and business rule failures. An error payload is also returned.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="api-response-error-payload">API Response Error Payload</h2>
-<p>In cases where further information on the cause of an error is provided, it is in the form of a json response body with the following elements:</p>
-<ul>
-<li>Error Code</li>
-<li>Error Reason</li>
-<li>Error Message</li>
-<li>Status</li>
-</ul>
-<p>As example error response payload:</p>
-<pre><code class="language-json">{
-  "code": "APN-PO-0002:GetCustomerDetails:1:WS-PO-0001",
-  "reason": "Authorization error",
-  "message": "Authorization Failed: Corporate Customer is not allowed to perform this service",
-  "status": "401:APN-PO-0002"
-}
-</code></pre>
-<p>In instances where the processing failure in a downstream system, error responses from the downstream system
-are encoded into the response payload.</p>
-<h2 id="structure-of-the-error-body-response">Structure of the Error Body Response</h2>
-<table>
-<thead>
-<tr>
-<th>Element</th>
-<th>Structure or description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Code</td>
-<td>API_GW_ERROR_CODE:ESB_WRAPPER_NAME:ESB_RESULT_CODE:ESB_MESSAGE_CODE</td>
-</tr>
-<tr>
-<td>Reason</td>
-<td>API_GW_ERROR_EXPLANATION</td>
-</tr>
-<tr>
-<td>Message</td>
-<td>ESB_RESULT_MESSAGE</td>
-</tr>
-<tr>
-<td>Status</td>
-<td>HTTP_CODE:API_GW_ERROR_CODE</td>
-</tr>
-</tbody>
-</table>
-<h3 id="description-of-encoded-information-in-the-error-response-json">Description of encoded information in the error response json</h3>
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>API_GW_ERROR_CODE</td>
-<td>API Gateway error code</td>
-</tr>
-<tr>
-<td>ESB_WRAPPER_NAME</td>
-<td>Downstream API operation</td>
-</tr>
-<tr>
-<td>ESB_RESULT_CODE</td>
-<td>Downstream API result code</td>
-</tr>
-<tr>
-<td>ESB_MESSAGE_CODE</td>
-<td>Downstream message code</td>
-</tr>
-<tr>
-<td>API_GW_ERROR_EXPLANATION</td>
-<td>Technical supporting information related to the error</td>
-</tr>
-<tr>
-<td>ESB_RESULT_MESSAGE</td>
-<td>Downstream API result message</td>
-</tr>
-<tr>
-<td>HTTP_CODE</td>
-<td>HTTP response code</td>
-</tr>
-</tbody>
-</table>
+<p><iframe class="swagger-ui-iframe" frameborder="0" id="874febea" src="swagger-874febea.html" style="overflow:hidden;width:100%;" width="100%"></iframe></p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
-<a class="btn btn-neutral float-left" href="../ticketSpecification/" title="ticketSpecification"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+<a class="btn btn-neutral float-left" href="../serviceSpecification/" title="serviceSpecification"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+<a class="btn btn-neutral float-right" href="../errorCodes/" title="Error Codes">Next <span class="icon icon-circle-arrow-right"></span></a>
 </div>
 <hr/>
 <div role="contentinfo">
@@ -252,7 +107,8 @@ are encoded into the response payload.</p>
 </div>
 <div aria-label="Versions" class="rst-versions" role="note">
 <span class="rst-current-version" data-toggle="rst-current-version">
-<span><a href="../ticketSpecification/" style="color: #fcfcfc">« Previous</a></span>
+<span><a href="../serviceSpecification/" style="color: #fcfcfc">« Previous</a></span>
+<span><a href="../errorCodes/" style="color: #fcfcfc">Next »</a></span>
 </span>
 </div>
 <script src="../js/jquery-3.6.0.min.js"></script>
@@ -281,7 +137,7 @@ are encoded into the response payload.</p>
                 iframe_id_list.push(iframes[i].getAttribute("id"))
             }
         
-            let ticking = true;
+            let ticking = false;
             
             document.addEventListener('scroll', function(e) {
                 if (!ticking) {

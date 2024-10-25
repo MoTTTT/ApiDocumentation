@@ -1,10 +1,37 @@
 {
     "swagger": "2.0",
     "info": {
-    "description": "\n**VERSION**: **V1.2**\nEnhanced GET Operation: return additiona order information; Added various validations; Documentation improvements\n**VERSION**: **V1.1**\nAdded support for auto-update of spend limits: addAdhocBundle product order has been updated with the addition of AutoAdjustSpendLimitFlag to authorise adjustment of the temporary spend limit to the ad-hoc bundle cost on add-hoc bundle purchases.\n**VERSION**: **V1.0**\nInitial release\n### API Headers configuration\nThe following headers mandatory.\n\n  | Headers configuration | Value |\n  |--------|-------|\n  | Accept | application/json |\n  | Content-Type | application/json |\n\n\n Copyright: Telkom SA Ltd\n ",
-    "version": "1.1",
-    "title": "Onbillers Product Ordering API"
+    "description": "\n
+## Releases\n
+
+| Version | Description                                                         |\n
+|---------|---------------------------------------------------------------------|\n
+| V1.2    | Enhanced GET Operation: return additional order information; 
+ Added various validations; Documentation improvements                          |\n
+| V1.1    | Added support for auto-update of spend limits: addAdhocBundle
+ product order has been updated with the addition of AutoAdjustSpendLimitFlag 
+ to authorise adjustment of the temporary spend limit to the ad-hoc bundle cost 
+ on add-hoc bundle purchases.                                                   |\n
+| V1.0    | Initial release                                                     |\n
+
+## Request Headers\n
+
+The following headers are mandatory:\n\n 
+
+| Header            |        Value                    |\n
+|-------------------|---------------------------------|\n
+| `Accept`          | application/json                |\n
+| `Content-Type`    | application/json                |\n
+| `Authorization`   | Basic Base64(username:password) |\n\n 
+
+See the *Authentication and Authorization* chapter for more detail on the 
+`Authorization` header value \n\n
+
+Copyright: Telkom SA Ltd",
+    "version": "1.2",
+    "title": "Order Management"
     },
+    "host": "ecdev01api.telkom.co.za",
     "basePath": "/cons-po/ProductOrder/v1",
     "schemes": [
     "https"
@@ -431,19 +458,21 @@
     },
     "description": "A Product Order is a type of order which can be used to place an order between a customer and a service provider or between a service provider and a partner and vice versa",
     "example": {
-    "externalId": "<YOUR ORDER REF>",
-    "requestedCompletionDate": "<2020-02-13T08:13:59.506Z>",
-    "orderItem": {
+    "externalId": "SimulatorRef0002",
+    "requestedCompletionDate": "2025-01-29T18:13:59.506Z",
+    "orderItem": [
+    {
     "action": "cease",
     "product": {
     "productCharacteristic": [
     {
     "name": "MSISDN",
-    "value": "<0814569876>"
+    "value": "0814569876"
     }
     ]
     }
     }
+    ]
     }
     },
     "ProductOrderReplaceOffer": {
@@ -471,38 +500,40 @@
     },
     "description": "A Product Order is a type of order which can be used to place an order between a customer and a service provider or between a service provider and a partner and vice versa",
     "example": {
-    "externalId": "<YOUR ORDER REF>",
-    "requestedCompletionDate": "<2020-02-13T08:13:59.506Z>",
-    "orderItem": {
+    "externalId": "SimulatorRef0003",
+    "requestedCompletionDate": "2025-01-29T18:13:59.506Z",
+    "orderItem": [
+    {
     "orderItemType": "Deal",
     "action": "replaceOffer",
     "product": {
-    "id": "<TVC2002289>",
-    "name": "<FreeMe 20GB Deal>",
+    "id": "TVC2002289",
+    "name": "FreeMe 20GB Deal",
     "productCharacteristic": [
     {
     "name": "ReplaceOffer.SIM",
-    "value": "<89270200100001700000>"
+    "value": "89270200100001700000"
     },
     {
     "name": "ReplaceOffer.MSISDN",
-    "value": "<0814569876>"
+    "value": "0814569876"
     },
     {
     "name": "Deal.contractPeriod",
-    "value": "<24>"
+    "value": "24"
     },
     {
     "name": "ReplaceOffer.commitmentPeriod",
-    "value": "<24>"
+    "value": "24"
     },
     {
     "name": "Deal.SIM",
-    "value": "<89270200100001905985>"
+    "value": "89270200100001905985"
     }
     ]
     }
     }
+    ]
     }
     },
     "ProductOrderCreateDeal": {
@@ -530,23 +561,23 @@
     },
     "description": "A Product Order is a type of order which can be used to place an order between a customer and a service provider or between a service provider and a partner and vice versa",
     "example": {
-    "externalId": "<YOUR ORDER REF>",
-    "requestedCompletionDate": "<2022-09-29T18:13:59.506Z>",
+    "externalId": "SimulatorRef0001",
+    "requestedCompletionDate": "2025-01-29T18:13:59.506Z",
     "orderItem": [
     {
     "orderItemType": "Deal",
     "action": "createDeal",
     "product": {
-    "id": "<TMI1909001>",
-    "name": "<Mobile Data 1GB TopUp Deal>",
+    "id": "TMI1909001",
+    "name": "Mobile Data 1GB TopUp Deal",
     "productCharacteristic": [
     {
     "name": "Deal.Sim",
-    "value": "<89270200100001700001>"
+    "value": "89270200100001700001"
     },
     {
     "name": "Deal.ContractPeriod",
-    "value": "<24>"
+    "value": "24"
     }
     ]
     }
@@ -579,14 +610,15 @@
     },
     "description": "A Product Order is a type of order which can be used to place an order between a customer and a service provider or between a service provider and a partner and vice versa",
     "example": {
-    "externalId": "<YOUR ORDER REF>",
-    "orderItem": {
+    "externalId": "SimulatorRef0004",
+    "orderItem": [
+    {
     "action": "changeSIM",
     "product": {
     "productCharacteristic": [
     {
-    "name": "SIM",
-    "value": "<89270200100001700001>"
+    "name": "Deal.SIM",
+    "value": "89270200100001700001"
     },
     {
     "name": "M2MSIMIndicator",
@@ -595,10 +627,11 @@
     ]
     },
     "serviceRef": {
-    "id": "<0816785432>",
+    "id": "0816785432",
     "serviceType": "Mobile"
     }
     }
+    ]
     }
     },
     "ProductOrderAddAdhocBundle": {
@@ -616,27 +649,30 @@
     "type": "string",
     "description": "Requested delivery date from the requester perspective"
     },
-    "OrderItem": {
+    "OrderItem": [
+    {
     "type": "array",
     "description": "A list of order items (OrderItem [*]). Order items that have to be processed",
     "items": {
     "$ref": "#/definitions/OrderItem"
     }
     }
+    ]
     },
     "description": "A Product Order is a type of order which can be used to place an order between a customer and a service provider or between a service provider and a partner and vice versa",
     "example": {
-    "externalId": "<YOUR ORDER REF>",
-    "orderItem": {
+    "externalId": "SimulatorRef0005",
+    "orderItem": [
+    {
     "orderItemType": "Bundle",
     "action": "addAdHocBundle",
     "product": {
-    "id": "<S2318>",
-    "name": "<10GB + 10GB Once-Off>",
+    "id": "S2318",
+    "name": "10GB + 10GB Once-Off",
     "productCharacteristic": [
     {
     "name": "MSISDN",
-    "value": "<0812005991>"
+    "value": "0812005991"
     },
     {
     "name": "AutoAdjustSpendLimitFlag",
@@ -645,6 +681,7 @@
     ]
     }
     }
+    ]
     }
     },
     "ProductOrderGet": {
