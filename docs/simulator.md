@@ -12,7 +12,7 @@ These environments differ, as detailed in the following sections.
 
 ## API Simulator
 
-The API simulator is an instance of the API gateway deployed to a non-production environment, using stubbed internal integration instead of connecting to the various Telco internal systems that the ETE and Production environments are.
+The API simulator is an instance of the API gateway deployed to a non-production environment, using stubbed internal integration instead of connecting to the various Telco internal systems that the ETE and Production environments do.
 
 This environment uses a pre-built profile, shared by all users of the environment.
 
