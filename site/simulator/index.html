@@ -73,6 +73,8 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../errorCodes/">Error Codes</a>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/">API Failures</a>
+</li>
 </ul>
 </div>
 </div>
@@ -105,7 +107,7 @@
 </ul>
 <p>These environments differ, as detailed in the following sections.</p>
 <h2 id="api-simulator">API Simulator</h2>
-<p>The API simulator is an instance of the API gateway deployed to a non-production environment, using stubbed internal integration instead of connecting to the various Telco internal systems that the ETE and Production environments are.</p>
+<p>The API simulator is an instance of the API gateway deployed to a non-production environment, using stubbed internal integration instead of connecting to the various Telco internal systems that the ETE and Production environments do.</p>
 <p>This environment uses a pre-built profile, shared by all users of the environment.</p>
 <p>Validation of some attributes in the API payloads does not take place, as it would on any other environment. Specifically, ICCIDs Deal ID, and MSISDNs are not validated.</p>
 <p>This allows development testing to proceed without the configuration of per API consumer profiles,

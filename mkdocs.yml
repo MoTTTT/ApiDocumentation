@@ -25,3 +25,4 @@ nav:
     - ticketSpecification.md
   - 'Troubleshooting':
     - errorCodes.md
+    - troubleshooting.md
