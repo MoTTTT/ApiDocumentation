@@ -1,4 +1,4 @@
-# API Failures
+# Troubleshooting
 
 The tables below provide further information on typically encountered errors, with suggested actions. This is followed by investigation and troubleshooting advice.
 

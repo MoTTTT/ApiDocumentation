@@ -17,12 +17,11 @@ nav:
     - onboardingProcess.md
     - simulator.md
     - authorisation.md
+    - errorCodes.md
+    - troubleshooting.md
   - 'Order API':
     - orderSpecification.md
   - 'Service API':
     - serviceSpecification.md
   - 'Ticket API':
     - ticketSpecification.md
-  - 'Troubleshooting':
-    - errorCodes.md
-    - troubleshooting.md
