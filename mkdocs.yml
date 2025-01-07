@@ -6,10 +6,12 @@ site_author: Martin Colley
 
 plugins:
     - search
-
     - swagger-ui-tag
 
-theme: readthedocs
+theme:
+  name: readthedocs
+  analytics:
+    gtag: G-72998NWP0W
 
 nav:
   - 'Introduction':

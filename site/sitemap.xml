@@ -2,57 +2,57 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://motttt.github.io/ApiDocumentation/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://motttt.github.io/ApiDocumentation/apiOperationList/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://motttt.github.io/ApiDocumentation/authorisation/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://motttt.github.io/ApiDocumentation/errorCodes/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://motttt.github.io/ApiDocumentation/onboardingProcess/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://motttt.github.io/ApiDocumentation/orderSpecification/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://motttt.github.io/ApiDocumentation/serviceSpecification/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://motttt.github.io/ApiDocumentation/simulator/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://motttt.github.io/ApiDocumentation/ticketSpecification/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://motttt.github.io/ApiDocumentation/tmfApiSpecifications/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://motttt.github.io/ApiDocumentation/troubleshooting/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
